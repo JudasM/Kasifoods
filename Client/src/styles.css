@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dark-blue: #3d5a80;
+  --light-blue: #98c1d9;
+  --lighter-blue: #e0fbfc;
+  --orange-ish: #ee6c4d;
+  --darker-blue: #293241;
+  --font-family: "Your Custom Font", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+}
