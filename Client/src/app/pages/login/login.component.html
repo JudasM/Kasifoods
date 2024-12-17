@@ -1,62 +1,110 @@
-<section class="bg-white min-h-screen">
-    <div class="flex flex-col items-center justify-center px-6 py-16 mx-auto lg:py-24">
-      <div class="w-full bg-gray-100 rounded-lg shadow-md sm:max-w-md">
-        <div class="p-6 space-y-6">
-          <h1 class="text-2xl font-semibold leading-tight tracking-tight text-gray-900">
-            Sign in to your account
-          </h1>
-          <form class="space-y-4" action="#">
-            <div>
-              <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Your email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-orange-600 focus:border-orange-600 block w-full p-2.5"
-                placeholder="name@company.com"
-                required=""
-              />
-            </div>
-            <div>
-              <label for="password" class="block mb-2 text-sm font-medium text-gray-700">Password</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="••••••••"
-                class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-orange-600 focus:border-orange-600 block w-full p-2.5"
-                required=""
-              />
-            </div>
-            <div class="flex items-center justify-between">
-              <div class="flex items-start">
-                <div class="flex items-center h-5">
-                  <input
-                    id="remember"
-                    aria-describedby="remember"
-                    type="checkbox"
-                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-orange-600"
-                  />
-                </div>
-                <div class="ml-3 text-sm">
-                  <label for="remember" class="text-gray-700">Remember me</label>
-                </div>
-              </div>
-              <a href="#" class="text-sm font-medium text-orange-600 hover:underline">Forgot password?</a>
-            </div>
-            <button
-              type="submit"
-              class="w-full text-white bg-orange-600 hover:bg-orange-700 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-            >
-              Sign in
-            </button>
-            <p class="text-sm font-light text-gray-500">
-              Don’t have an account yet?
-              <a href="#" routerLink = '/register' class="font-medium text-orange-600 hover:underline">Sign up</a>
-            </p>
-          </form>
-        </div>
+<section class="bg-white min-h-screen flex items-center justify-center p-4">
+  <div
+    class="grid md:grid-cols-3 items-center shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-xl overflow-hidden max-w-4xl mx-auto"
+  >
+    <!-- Info Section -->
+    <div
+      class="max-md:order-1 flex flex-col justify-center space-y-16 max-md:mt-16 min-h-full bg-gradient-to-r from-gray-900 to-gray-700 lg:px-8 px-4 py-4"
+    >
+      <div>
+        <h4 class="text-white text-lg font-semibold">Welcome Back</h4>
+        <p class="text-[13px] text-gray-300 mt-3 leading-relaxed">
+          Login to access your account and continue where you left off.
+        </p>
       </div>
     </div>
-  </section>
-  
+
+    <!-- Login Form -->
+    <form class="md:col-span-2 w-full py-6 px-6 sm:px-16">
+      <div class="mb-6">
+        <h3 class="text-gray-800 text-2xl font-bold">
+          Sign in to your account
+        </h3>
+      </div>
+
+      <div class="space-y-6">
+        <div>
+          <label class="text-gray-800 text-sm mb-2 block">Email</label>
+          <div class="relative flex items-center">
+            <input
+              type="email"
+              name="email"
+              required
+              class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+              placeholder="Enter email"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#bbb"
+              stroke="#bbb"
+              class="w-4 h-4 absolute right-4"
+              viewBox="0 0 682.667 682.667"
+            >
+              <!-- Email Icon SVG -->
+              <path d="M..." data-original="#000000"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div>
+          <label class="text-gray-800 text-sm mb-2 block">Password</label>
+          <div class="relative flex items-center">
+            <input
+              type="password"
+              name="password"
+              required
+              class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+              placeholder="Enter password"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#bbb"
+              stroke="#bbb"
+              class="w-4 h-4 absolute right-4 cursor-pointer"
+              viewBox="0 0 128 128"
+            >
+              <!-- Password Eye Icon SVG -->
+              <path d="M..." data-original="#000000"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div class="flex items-start">
+            <input
+              id="remember"
+              type="checkbox"
+              class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-600"
+            />
+            <label for="remember" class="ml-3 text-sm text-gray-800">
+              Remember me
+            </label>
+          </div>
+          <a href="#" class="text-sm font-medium text-blue-600 hover:underline">
+            Forgot password?
+          </a>
+        </div>
+      </div>
+
+      <div class="!mt-12">
+        <button
+          type="submit"
+          class="w-full py-3 px-4 tracking-wider text-sm rounded-md text-white bg-gray-700 hover:bg-gray-800 focus:outline-none"
+        >
+          Sign in
+        </button>
+      </div>
+
+      <p class="text-gray-800 text-sm mt-6 text-center">
+        Don’t have an account?
+        <a
+          href="#"
+          routerLink="/register"
+          class="text-blue-600 font-semibold hover:underline ml-1"
+        >
+          Create one
+        </a>
+      </p>
+    </form>
+  </div>
+</section>
